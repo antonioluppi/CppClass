@@ -1,9 +1,16 @@
 #include <cstdio>
-#include "main.h"
+#include "file.h"
 
-int print_list(int argc, char*argv[]){
-	for(unsigned int i=0; i < argc; i++){
-		printf("argv[%d]=%s\n",i, argv[i]);
+int list::printNext(){
+	if(i < argc){
+		printf("argv[%d]=%s\n", i, argv[i]);
+		i++;
+		return 1;
+	}else{
+		return 0;
 	}
-	return 0;
+}
+
+list::list(){
+	i = 0;
 }
