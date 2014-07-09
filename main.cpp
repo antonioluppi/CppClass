@@ -3,11 +3,16 @@
 
 int main(int argc,char*argv[]){
 	list myList;
-	myList.argc = argc;
-	myList.argv = argv;
+	myList.Add(argc, argv);
+	char name[] = "Elias";
+	myList.Add(name);
 	int N = 0;
+	
 	do{
-		N = myList.printNext();
+		N = myList.PrintNext();
 	}while(N);
+	
+	myList.PrintAll();
+	
 	return 0;
 }
