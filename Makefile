@@ -1,8 +1,8 @@
 all: main.o
-	gcc -o program main.o
+	g++ -o program main.o
 
 main.o: main.cpp main.h
-	gcc -c main.c
-
+	g++ -c main.cpp
+	
 clean:
 	rm -rf *.o program
